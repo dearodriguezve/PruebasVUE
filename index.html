@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hola Mundo!</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{titulo}}</h1>
+            <ul>
+                <li v-for="fruta of frutas">{{fruta}}</li>
+            </ul>
+            <ul>
+                <li v-for="fruta2 of frutas2">
+                    {{fruta2.nombre}} - {{fruta2.cantidad}}
+                    <span v-if="fruta2.cantidad===0"> - Sin stock</span>
+                </li>
+            </ul>
+        </div>
+        <!-- usando llamado a script modo develop-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
